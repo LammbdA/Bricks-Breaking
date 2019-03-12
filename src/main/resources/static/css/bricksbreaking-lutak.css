@@ -1,0 +1,112 @@
+body{
+    background: wheat no-repeat center fixed;
+    background-size: cover;
+}
+
+h1{
+    display: block;
+    transition: all 3.0s;
+    color: #cc0000;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 900;
+    background: white;
+    opacity: 0.5;
+    width: 500px;
+    margin: auto;
+    resize: none;
+    direction: inherit;
+    cursor: wait;
+}
+
+h1:hover{
+    transform: rotate(360deg) scale(0.5);
+}
+
+
+#tlacidlo{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #982d3b;
+    background-color: rgb(255,246,214);
+    width: 100px;
+}
+
+.field{
+    border: black 3px solid;
+    margin: auto;
+}
+
+.table, .tr, .td{
+    position: static;
+    border: black 3px solid;
+    background: white;
+    border-collapse: collapse;
+    width: 500px;
+    height: 50px;
+}
+
+#state{
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    color: #982d3b;
+}
+
+#text{
+    display: block;
+    text-align: center;
+    color: #982d3b;
+    font-size: 20px;
+}
+
+div{
+    display: block;
+    text-align: center;
+    color: #982d3b;
+    font-size: 20px;
+}
+
+h2{
+    color: #982d3b;
+    font-size: 20px;
+}
+
+#fame{
+    color: black;
+}
+
+@keyframes example {
+    0% {
+        color: #982d3b;
+        font-size: 30px;
+    }
+    50% {
+        color: blue;
+        font-size: 40px;
+    }
+    100% {
+        color: aqua;
+        font-size: 50px;
+    }
+}
+
+#fame:hover{
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+}
+
+#comment{
+    position: relative;
+    bottom: 600px;
+    left: 700px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bricks Breaking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bricksbreaking-lutak.css" />
+</head>
+<body>
+
+<div th:fragment="header">
+    <a href="/BricksBreaking-Lutak">Game</a>.
+    <span th:if="${!@userController.logged}">
+        <a href="/user">Login or register</a>
+    </span>
+    <span th:if="${@userController.logged}">
+        You are logged as <span th:text="${@userController.loggedUser?.username}"/>.
+        <a href="/logout">Logout</a>
+    </span>
+</div>
+
+</body>
+</html>

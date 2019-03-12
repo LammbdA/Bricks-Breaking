@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bricks Breaking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="css/bricksbreaking-lutak.css"/>
+</head>
+<body>
+
+<div th:replace="fragments::header"/>
+
+<h1>Bricks Breaking</h1>
+<a href="?command=new" id="tlacidlo">New Game</a>
+
+<p th:utext='${webUI.renderAsHtml()}'/>
+<text id="text">
+    You have
+    <haha th:utext='${webUI.getField().getLifes()}'/>
+    lifes
+</text>
+
+<div>Rate the game <p th:utext='${webUI.renderRatingAsHtml()}'/></div>
+
+<!--<comment>-->
+    <!--Write comment <br/>-->
+    <!--Name-->
+    <!--<input name="username" type="text" th:value="${comment?.player}"/> <br/>-->
+    <!--Comment-->
+    <!--<input name="comment" type="text" th:value="${comment?.comment}"/> <br/>-->
+    <!--<input type="submit" value="OK"/>-->
+<!--</comment>-->
+
+<diva id="fame">Hall of fame</diva>
+<table class="table">
+    <tr class="tr">
+        <th>
+            User
+        </th>
+        <th>
+            Points
+        </th>
+    </tr>
+    <tr th:each="score: ${scores}">
+        <td class="td" th:text="${score.player}"/>
+        <td class="td" th:text="${score.points}"/>
+    </tr>
+</table>
+
+<table id="comment" class="table">
+    <tr class="tr">
+        <th>
+            User
+        </th>
+        <th>
+            Comment
+        </th>
+    </tr>
+    <tr th:each="comment: ${comments}">
+        <td class="td" th:text="${comment.player}"/>
+        <td class="td" th:text="${comment.comment}"/>
+    </tr>
+</table>
+
+
+</body>
+</html>
